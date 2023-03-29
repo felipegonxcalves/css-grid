@@ -50,12 +50,33 @@ body {
     border: solid 2px rgb(66, 183, 86);
 }
 
+.grid-container4 {
+    background-color: gray;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: 150px 1fr 100px;
+    grid-template-rows: 100px 400px 100px;
+    grid-template-areas: "header header header"
+                         "sidebar conteudo-principal conteudo-principal"
+                         "footer footer footer2"
+    ;
+    /*column-gap: 20px;*/
+    /*row-gap: 20px;*/
+    gap: 20px;
+}
+
+.grid-item4 {
+    background-color: rgb(68, 68, 193);
+    border: solid 2px rgb(66, 183, 86);
+}
+
 .header {
     grid-area: header;
 }
 
 .sidebar {
     grid-area: sidebar;
+    padding: 0 40px;
 }
 
 .conteudo-principal {
@@ -64,4 +85,72 @@ body {
 
 .footer {
     grid-area: footer;
+}
+
+.footer2 {
+    grid-area: footer2;
+}
+
+/* Colunas e linhas de forma automática */
+
+.grid-container5 {
+    background-color: gray;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    /*grid-template: auto auto auto / 150px auto auto;*/
+    grid-template-areas: "header header header"
+                         "sidebar conteudo-principal conteudo-principal"
+                         "footer3 footer3 footer5"
+    ;
+    /*column-gap: 20px;*/
+    /*row-gap: 20px;*/
+    gap: 20px;
+}
+
+.grid-item5 {
+    background-color: rgb(68, 68, 193);
+    border: solid 2px rgb(66, 183, 86);
+}
+
+.header5 {
+    grid-area: header;
+    padding: 40px 0;
+}
+
+.sidebar5 {
+    grid-area: sidebar;
+    padding: 0 40px;
+}
+
+.conteudo-principal5 {
+    grid-area: conteudo-principal;
+}
+
+.footer3 {
+    grid-area: footer3;
+    padding: 40px 0;
+}
+
+.footer5 {
+    grid-area: footer5;
+}
+
+
+/* Conhecendo o auto-fill e auto-fit com minmax */
+
+.grid-container6 {
+    background-color: gray;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Auto-fit a gente diz para as colunas se auto adequarem ao tamanho que a gente delimitar e no minmax a gente delimita um tamanho  */
+}
+
+.grid-item6 {
+    background-color: rgb(68, 68, 193);
+    border: solid 2px rgb(66, 183, 86);
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px;
 }
