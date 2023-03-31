@@ -1,0 +1,33 @@
+body {
+    margin: 10px;
+}
+
+.mt {
+    margin-top: 15px;
+}
+
+.grid-container {
+    background-color: gray;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: 200px;
+    justify-content: center; /* Alinhamento dos itens na horizontal */
+    align-items: center; /* alinhamento do item na vertical */
+}
+
+.grid-item {
+    background-color: rgb(68, 68, 193);
+    border: solid 2px rgb(66, 183, 86);
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.start {
+    align-self: start;
+}
+
+.end {
+    align-self: end;
+}

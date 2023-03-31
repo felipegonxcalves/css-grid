@@ -1,0 +1,38 @@
+body {
+    margin: 10px;
+}
+
+.mt {
+    margin-top: 10px;
+}
+
+.grid-container {
+    background-color: gray;
+    border: solid 2px black;
+    display: grid;
+    grid-template-columns: repeat(5, 150px);
+    justify-content: center; /* Alinhamento dos itens na horizontal */
+    grid-template-rows: 200px;
+}
+
+.grid-item {
+    background-color: rgb(68, 68, 193);
+    border: solid 2px rgb(66, 183, 86);
+    font-size: 24px;
+    font-weight: 900;
+    padding: 10px;
+}
+
+.start {
+    align-self: start;
+    justify-self: start; /* Alinhamento do item dentro da COLUNA */
+}
+
+.center {
+    justify-self: center;
+}
+
+.end {
+    align-self: end;
+    justify-self: end;
+}
